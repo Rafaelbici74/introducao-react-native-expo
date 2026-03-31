@@ -11,6 +11,11 @@ const styles = StyleSheet.create({
         padding: 8, 
         alignItems: 'center', // alinhamento horizontal - flexDirection collumn
     }, 
+
+    container2:{
+        flexDirection: 'row',
+    },
+
     titulo: {
         fontSize: RFPercentage(4), // tamanho da fonte
         fontWeight: 'bold', 
@@ -30,25 +35,23 @@ const styles = StyleSheet.create({
     }, 
     botaoAlert: {
         width: '75%', 
-        margin: RFPercentage(2),         
+        margin: RFPercentage(2),        
     }, 
     valor: {
         color: 'darkslategrey',  
         fontSize: RFPercentage(4),
-        width: RFPercentage(0.2),
     }, 
     botao: {
         backgroundColor: 'darkslategrey', 
-        width: '75%', 
-        borderRadius: RFPercentage(2), 
-        padding: RFPercentage(1), 
-        alignItems: 'center' , 
-        justifyContent: 'center', 
-        margin: RFPercentage(2),
+        width: '45%', 
+        borderRadius: RFPercentage(1), 
+        padding: RFPercentage(0.5), 
+        margin: RFPercentage(0.5),
     }, 
     txtBotao: {
         fontSize: RFPercentage(2), 
         color: '#fafafa',
+         textAlign: 'center',
     }, 
 });
 
