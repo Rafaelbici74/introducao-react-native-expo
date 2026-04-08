@@ -5,6 +5,7 @@ import Exemplo01 from './src/exemplos/ex-01';
 import Exemplo02 from './src/exemplos/ex-02';
 import Exemplo03 from './src/exemplos/ex03';
 import Exemplo04 from './src/exemplos/ex04';
+import Exemplo05 from './src/exemplos/ex05';
 
 import Atividade01 from './src/atividades/atv-01';
 import Atividade02 from './src/atividades/atv-02';

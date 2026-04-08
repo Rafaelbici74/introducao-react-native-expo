@@ -9,13 +9,14 @@ const styles = StyleSheet.create(
             alignItems: 'center',             
         }, 
         titulo: {
-            fontSize: RFPercentage(5), 
+            fontSize: RFPercentage(4), 
             fontWeight: 'bold', 
             color: 'darkslategrey', 
             margin: RFPercentage(5),
         }, 
         txt: {
             fontSize: RFPercentage(2.5), 
+            marginBottom: RFPercentage(2),
         }, 
         input: {
             borderWidth: RFPercentage(0.5), 
@@ -25,6 +26,7 @@ const styles = StyleSheet.create(
             padding: RFPercentage(1.5), 
             fontSize: RFPercentage(2), 
             textAlign: 'center',
+            marginBottom: RFPercentage(2),
         }, 
         botao: {
             backgroundColor: 'darkslategrey', 
@@ -37,7 +39,9 @@ const styles = StyleSheet.create(
         }, 
         txtBotao: {
             fontSize: RFPercentage(2), 
-            color: '#fafafa',
+            fontWeight: 'bold',
+            textAlign: 'center',
+            color: '#000000',
         },
     }
 );  
