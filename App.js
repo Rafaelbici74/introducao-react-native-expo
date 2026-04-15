@@ -11,11 +11,12 @@ import Atividade01 from './src/atividades/atv-01';
 import Atividade02 from './src/atividades/atv-02';
 import Atividade03 from './src/atividades/atv-03';
 import Atividade04 from './src/atividades/atv-04';
+import Atividade05 from './src/atividades/atv-05';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Atividade04/>
+      <Atividade05/>
       <StatusBar style="auto" />
     </View>
   );
@@ -24,7 +25,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b271b8', 
+    backgroundColor: '#ffffff', 
     padding: 16, 
     // alignItems: 'center',
     // justifyContent: 'center',
