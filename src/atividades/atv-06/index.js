@@ -15,37 +15,43 @@ export default function Atividade06() {
     const mensErro = 'Valores inseridos da forma incorreta';
 
     function handleCalcularImc(){
-        const tmpImc = peso / (altura * altura);
-        setImc(tmpImc);
-    }
+        const pesoNum = parseFloat(peso);
+        const alturaNum = parseFloat(altura);
 
-    function imcStatus() {
-        if (imc < 18.5) {
-            setStatus('Abaixo do peso');
+        const tmpImc = pesoNum / (alturaNum * alturaNum);
+        setImc(tmpImc);
+
+        let msg = '';
+
+        if (tmpImc < 18.5) {
+            msg = 'Abaixo do peso';
         } 
-        else if (imc > 18.5 && imc < 24.9) {
-            setStatus('Peso normal');
+        else if (tmpImc > 18.5 && tmpImc < 24.9) {
+            msg = 'Peso normal';
         } 
-        else if (imc > 25 && imc < 29.9) {
-            setStatus('Sobrepeso');
+        else if (tmpImc > 25 && tmpImc < 29.9) {
+            msg = 'Sobrepeso';
         } 
-        else if (imc > 30 && imc < 34.9) {
-            setStatus('Obesidade grau 1');
+        else if (tmpImc > 30 && tmpImc < 34.9) {
+            msg = 'Obesidade grau 1';
         } 
-        else if (imc > 35 && imc < 39.9) {
-            setStatus('Obesidade grau 2');
+        else if (tmpImc > 35 && tmpImc < 39.9) {
+            msg = 'Obesidade grau 2';
         } 
-        else if (imc > 40) {
-            setStatus('Obesidade grau 3');
+        else if (tmpImc > 40) {
+            msg = 'Obesidade grau 3';
         }
         else {
-            setStatus('Você não é humano?');
+            msg = 'Você não é humano?';
         }
+
+        setStatus(msg);
     }
 
     return (
         <View style={styles.container}>
             <Text style={styles.titulo}>Calculo ade IMC</Text>
+
             <View style={styles.ladoalado}>
                 <Input placeholder='Peso' valor={peso} atualizaValor={setPeso}/>
                 <Input placeholder='Altura' valor={altura} atualizaValor={setAltura}/>
@@ -53,8 +59,9 @@ export default function Atividade06() {
 
             <Text style={styles.imc}>{isNaN(imc) ? mensErro : imc.toFixed(2)}</Text>
 
-            <Text calcular2={setStatus} style={styles.txtMensagem}>{status}</Text>
-            <Botao calcular={handleCalcularImc} calcular2={imcStatus}>Calcular</Botao>
+            <Text style={[styles.imc, styles.txtMensagem]}>{status}</Text>
+
+            <Botao calcular={handleCalcularImc}>Calcular</Botao>
         </View>
-    )
+    );
 }
